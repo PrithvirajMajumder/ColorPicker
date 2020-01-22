@@ -1,0 +1,22 @@
+
+.button-parts{
+        text-align: center;
+        h1{
+                background: rgba(0, 0, 0, 0.42);
+                font-size: 25px;
+                font-weight: bold;
+                padding: 10px;
+                border-radius: 10px;
+        }
+
+}
+.interaction-parts{
+        text-align: center;
+        .input-container{
+                display: inline;
+                font-size: 20px;
+        }
+}
+.area{
+        justify-content: space-between;
+}

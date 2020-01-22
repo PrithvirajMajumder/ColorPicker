@@ -1,0 +1,49 @@
+.main-header {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: black;
+  color: white;
+}
+
+.button-parts {
+  text-align: center;
+}
+
+.button-parts h1 {
+  background: rgba(0, 0, 0, 0.42);
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.interaction-parts {
+  text-align: center;
+}
+
+.interaction-parts .input-container {
+  display: inline;
+  font-size: 20px;
+}
+
+.area {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container .area {
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */
