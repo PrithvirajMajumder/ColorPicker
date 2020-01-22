@@ -19,46 +19,40 @@ crossorigin="anonymous"></script>
         </div>
     </header>
     <div class="container">
-        <div class="area">
+        <div class="area" style="border: 1px solid;">
             <div class="button-parts">
                 <h1>Button Size</h1>
-                <div class="interaction-parts">
-                    <p>Button Vertical Size</p>
-                    <div class="input-container">
-                        <input type="number" class="text-input">
-                    </div>
+                <div class="form-controls">
+                    <label for="button-width">Width</label>
+                    <input type="number" id="button-width" class="text-input">
                 </div>
-                <div class="interaction-parts">
-                    <p >Button Horizontal Size</p>
-                    <div class="input-container">
-                        <input type="number" class="text-input">
-                    </div>
+                <div class="form-controls">
+                    <label for="button-height">Height</label>
+                    <input type="number" id="button-height" class="text-input">
                 </div>
             </div>
+
             <div class="button-parts">
                 <h1>Button Text</h1>
-                <div class="interaction-parts">
-                    <p>Button Text Color</p>
-                    <div class="input-container">
-                        <input type="color" class="text-input">
-                    </div>
+                <div class="form-controls">
+                    <label for="button-text-color">Text Color</label>
+                    <input type="color" id="button-text-color" class="text-input" style="width: 11rem;">
                 </div>
-                <div class="interaction-parts">
-                    <p>Button Text Size</p>
-                    <div class="input-container">
-                        <input type="number" class="text-input">
-                    </div>
+                <div class="form-controls">
+                    <label for="button-text-size">Test Size</label>
+                    <input type="number" id="button-text-size" class="text-input">
                 </div>
             </div>
+            
             <div class="button-parts">
                 <h1>Button Border</h1>
-                <div class="interaction-parts">
+                <div class="form-controls">
                     <p>Border Radius</p>
                     <div class="input-container">
                         <input type="number" class="text-input">
                     </div>
                 </div>
-                <div class="interaction-parts">
+                <div class="form-controls">
                     <p>Border Size</p>
                     <div class="input-container">
                         <input type="number" class="text-input">
@@ -66,24 +60,54 @@ crossorigin="anonymous"></script>
                 </div>
             </div>
         </div>
+
         <div class="area">
             <div class="output-button">
-                <button style="
-                box-shadow:inset 0px 28px 0px 0px #3dc21b;
-                background-color:#44c767;
-                display:inline-block;
-                cursor:pointer;
-                color:#ffffff;
-                font-family:Arial;
-                font-size:27px;
-                padding:32px 76px;
-                text-decoration:none;
-                text-shadow:0px -1px 0px #2f6627;">clickme</button>
+                <button id="output-button">click me</button>
             </div>
         </div>
     </div>
     <script>
         $(document).ready(function () {
+            var buttonStyles = {
+                width: "100px",
+                height: "100px",
+                color: "#777777",
+                fontSize: "12px"
+            };
+
+            $('#button-width').keyup(function () {
+                var inputValue = $(this).val();
+                buttonStyles.width = inputValue + 'px';
+                renderStyles();
+            });
+
+            $('#button-height').keyup(function () {
+                var inputValue = $(this).val();
+                buttonStyles.height = inputValue + 'px';
+                renderStyles();
+            });
+
+            $('#button-text-color').change(function () {
+                var inputValue = $(this).val();
+                buttonStyles.color = inputValue;
+                renderStyles();
+            });
+
+            $('#button-text-size').keyup(function () {
+                var inputValue = $(this).val();
+                buttonStyles.fontSize = inputValue + 'px';
+                renderStyles();
+            });
+
+            function renderStyles() {
+             $('#output-button').css({
+                 "width": buttonStyles.width,
+                 "height": buttonStyles.height,
+                 "color": buttonStyles.color,
+                 "font-size": buttonStyles.fontSize
+             });
+            }
         });
     </script>
 </body>

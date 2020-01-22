@@ -22,11 +22,12 @@
   border-radius: 10px;
 }
 
-.interaction-parts {
+.form-controls {
   text-align: center;
+  margin-top: 1rem;
 }
 
-.interaction-parts .input-container {
+.form-controls .input-container {
   display: inline;
   font-size: 20px;
 }
@@ -44,6 +45,6 @@ body {
 }
 
 .container .area {
-  display: inline-block;
+   float: left;
 }
 /*# sourceMappingURL=style.css.map */
